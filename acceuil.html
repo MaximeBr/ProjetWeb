@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IronTask</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templates/menu.css" rel="stylesheet">
+    <link href="open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+</head>
+<body>
+
+
+<header class="navbar navbar-dark bg-primary navbar-expand-md bg-faded justify-content-center">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#collapsingNavbar3">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+        <ul class="navbar-nav mx-auto w-100 justify-content-center">
+
+            <li class="nav-item px-3 "><a class="nav-link" href="#">Tâches
+                <span class="sr-only">(current)</span>
+            </a></li>
+            <li class="ligne_verticale"></li>
+            <li class="nav-item active px-3"><a class="nav-link" href="#">Personnels</a></li>
+            <li class="ligne_verticale"></li>
+            <li class="nav-item px-3"><a class="nav-link" href="#">Stocks</a></li>
+        </ul>
+
+    </div>
+</header>
+
+<div class="container ">
+    <div class="row mt-3 ">
+        <div class="col-sm mb3   ">
+            <ul class="nav nav-tabs active" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Liste Bénévoles</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Intervenants</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sponsors</a>
+                </li>
+            </ul>
+
+
+            <div class="row mt-3 mb-1">
+                <div class="col-sm">
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Recherche"
+                               aria-label="Recherche">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+                    </form>
+                </div>
+
+                <div class="col-sm">
+
+                    <div class="dropdown float-right">
+                        <button class="btn  dropdown-toggle" type="button" id="boutonTri"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Trier par : Grade
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="boutonTri">
+                            <a class="dropdown-item" href="#">Alphabétique</a>
+                            <a class="dropdown-item" href="#">Nombre de taches</a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- rdv -->
+
+    <tr>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>3</td>
+            <td><a href="http://www.apple.com/fr/"><img src="img/eye.svg"  alt="eye"/></a></td>
+    </tr>
+
+    <span class="plus"></span>
+
+    <!--bouton ajout-->
+    <button type="button" class="btn btn-primary ajouter" data-toggle="modal" data-target="#exampleModal">+</button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--fin bouton ajout-->
+
+</div>
+
+
+</body>
+</html>
