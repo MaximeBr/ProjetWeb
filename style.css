@@ -1,0 +1,45 @@
+html, body, h1, form, fieldset, input
+{
+margin: 0; padding: 0; border: none;
+}
+body {
+font-family: Helvetica, Arial, sans-serif; font-size: 12px;
+background :#ecf0f1 ;
+}
+#registration {
+    color: #fff;
+    background: #34495e;
+    border-radius: 10px;
+    margin: 10px;
+    width: 430px;
+     }
+
+ 
+#registration fieldset {
+      padding: 20px;
+      }
+	
+div.centre {
+	text-align:center;
+	padding-left : 39%;
+	padding-top : 15%;
+}
+
+label{
+    display: block;
+    width: 150px;
+    float: left;
+}
+
+input{
+ padding:3px;
+ border:1px solid #2980b9;
+ border-radius:5px;
+ width:200px;
+ box-shadow:1px 1px 2px #C0C0C0 inset;
+}
+
+
+#nom{
+  text-align: center;
+}
