@@ -44,10 +44,9 @@ $idMedecin = $_POST['idMedecin'];
 							'numSecu' => $numSecu,
 							'idMedecin' => $idMedecin)); 
 
-
-    print_r($req->errorInfo());
-
     echo "merci vos données ont bien été enregistrées :)";
+
+    header('Location: http://localhost/git/projetweb/list_patient.php ');
 
 ?>
 

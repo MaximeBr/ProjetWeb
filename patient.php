@@ -39,16 +39,15 @@
      		date N : <input type="date" name="dateN"><br />
      		ville N : <input type="text" name="villeN"><br />
      		num secu : <input type="number" name="numSecu"><br />
+     		M : <input type="number" name="idMedecin"><br />
 
      		<div class="form-group">
 				  <label for="sel1">Medecin :</label>
-				  <select class="form-control" id="sel1" name="idMedecin">
+				  <select class="form-control" id="sel1" name="rien">
 				    
 				    <?php
 				    $req = $bdd -> prepare('select nom from medecin');
 					$req -> execute();
-					
-
 
 				   		$i = 0;
 						while($i < $nbMedecin){
