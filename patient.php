@@ -8,7 +8,7 @@
 					die('Erreur : '.$e->getMessage());
 				}
 
-				$req = $linkpdo -> prepare('select count(*) from medecin ');
+				$req = $bdd -> prepare('select count(*) from medecin ');
 	$req -> execute();
 	$nbMedecin = $req -> fetch();
 	$nbMedecin = $nbMedecin[0];
@@ -39,14 +39,13 @@
      		date N : <input type="date" name="dateN"><br />
      		ville N : <input type="text" name="villeN"><br />
      		num secu : <input type="number" name="numSecu"><br />
-     		idMedecin : <input type="number" name="idMedecin">
 
      		<div class="form-group">
 				  <label for="sel1">Medecin :</label>
 				  <select class="form-control" id="sel1" name="idMedecin">
 				    
 				    <?php
-				    $req = $req = $linkpdo -> prepare('select nom from medecin');
+				    $req = $bdd -> prepare('select nom from medecin');
 					$req -> execute();
 					
 
