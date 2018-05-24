@@ -11,14 +11,14 @@ try {
 
 // recupere le nombre de participant a cet evenement
 
-$req = $linkpdo -> prepare('select count(*) from patient');
+$req = $linkpdo -> prepare('select count(*) from medecin');
 	$req -> execute();
-	$nbPatient = $req -> fetch();
-	$nbPatient = $nbPatient[0];
+	$nbMedecin = $req -> fetch();
+	$nbMedecin = $nbMedecin[0];
 
 // recupere lid des user qui participe a cet event
 
-$reqUser = $linkpdo -> prepare('select * from patient');
+$reqUser = $linkpdo -> prepare('select * from medecin');
 $reqUser -> execute();
 
 
@@ -37,9 +37,9 @@ $reqUser -> execute();
 </head>
 <body>
 
-	<<?php include ("navBar.php"); ?>
+	<?php include ("../static/navBar.php"); ?>
 	<div class="container-fluid">
-	<h2>Liste des patients inscrit</h2>
+	<h2>Liste des medecins inscrit</h2>
 
 
 	<div class="table-responsive">
@@ -48,19 +48,12 @@ $reqUser -> execute();
 				<th>Civilité</th>
 				<th>Nom</th>
 		        <th>Prenom</th>
-		        <th>Adresse</th>
-		        <th>Code Postal</th>
-		        <th>Ville</th>
-		        <th>Date de naissance</th>
-		        <th>Ville de naissance</th>
-		        <th>Numero de sécurité</th>
-		        <th>Medecin traitant</th>
 			</thead>
 
 			<?php
 			
 			$i = 0 ;
-			while($i < $nbPatient) {
+			while($i < $nbMedecin) {
 				$user = $reqUser -> fetch();
 				//print_r($user);
 				//$user = $user[0];
@@ -68,24 +61,16 @@ $reqUser -> execute();
 			?>
 			<tbody>
 				<tr>
-					<td> <?php echo $user[1] ?>  </td>
-					<td> <?php echo $user[2] ?>  </td>
 					<td> <?php echo $user[3] ?>  </td>
-					<td> <?php echo $user[4] ?>  </td>
-					<td> <?php echo $user[5] ?>  </td>
-					<td> <?php echo $user[6] ?>  </td>
-					<td> <?php echo $user[7] ?>  </td>
-					<td> <?php echo $user[8] ?>  </td>
-					<td> <?php echo $user[9] ?>  </td>
-					<td> <?php echo $user[10] ?>  </td>
-					
+					<td> <?php echo $user[2] ?>  </td>
+					<td> <?php echo $user[1] ?>  </td>
 				</tr>
 			</tbody>
 
 		<?php
 		}
 		?>
-		<input type="button" name="ajouter" value="patient.php" class="btn btn-default" onclick="go()">
+		<input type="button" name="ajouter" value="nouveau medecin" class="btn btn-default" onclick="go()">
 
 </body>
 </html>
@@ -94,6 +79,6 @@ $reqUser -> execute();
 
 <script type="text/javascript">
 	function go () {
-		document.location.href="http://localhost/git/projetweb/patient.php";
+		document.location.href="http://localhost/git/projetweb/form/form_medecin.php";
 	}
 </script>

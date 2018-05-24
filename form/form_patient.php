@@ -8,7 +8,7 @@
 					die('Erreur : '.$e->getMessage());
 				}
 
-				$req = $linkpdo -> prepare('select count(*) from medecin ');
+				$req = $bdd -> prepare('select count(*) from medecin ');
 	$req -> execute();
 	$nbMedecin = $req -> fetch();
 	$nbMedecin = $nbMedecin[0];
@@ -21,7 +21,7 @@
 	<title>MedecInfo</title>
 </head>
 <body>
-	<form action="ajout_patient.php" method="post"> 
+	<form action="../traitement/ajout_patient.php" method="post"> 
 
 			<div class="form-group">
     			<label for="civilite" id="lab">civilite :   </label>
@@ -39,17 +39,15 @@
      		date N : <input type="date" name="dateN"><br />
      		ville N : <input type="text" name="villeN"><br />
      		num secu : <input type="number" name="numSecu"><br />
-     		idMedecin : <input type="number" name="idMedecin">
+     		M : <input type="number" name="idMedecin"><br />
 
      		<div class="form-group">
 				  <label for="sel1">Medecin :</label>
-				  <select class="form-control" id="sel1" name="idMedecin">
+				  <select class="form-control" id="sel1" name="rien">
 				    
 				    <?php
-				    $req = $req = $linkpdo -> prepare('select nom from medecin');
+				    $req = $bdd -> prepare('select nom from medecin');
 					$req -> execute();
-					
-
 
 				   		$i = 0;
 						while($i < $nbMedecin){

@@ -46,7 +46,7 @@ $idMedecin = $_POST['idMedecin'];
 
     echo "merci vos données ont bien été enregistrées :)";
 
-    header('Location: http://localhost/git/projetweb/list_patient.php ');
+    header('Location: http://localhost/git/projetweb/list/list_patient.php ');
 
 ?>
 

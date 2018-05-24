@@ -30,9 +30,7 @@
 
 
 		if($mdp == $mdp_b) {
-
-			echo "string";
-			header('Location: http://localhost/git/ProjetWeb/index.html');
+			header('Location: http://localhost/git/ProjetWeb/list/list_rdv.php');
 		}
 
 		else {
