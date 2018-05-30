@@ -11,7 +11,7 @@ try {
 
 // recupere le nombre de participant a cet evenement
 
-$req = $linkpdo -> prepare('select count(*) from patient');
+$req = $linkpdo -> prepare('select count(*) from rdv');
 	$req -> execute();
 	$nbPatient = $req -> fetch();
 	$nbPatient = $nbPatient[0];
@@ -34,6 +34,7 @@ $reqUser -> execute();
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
 </head>
 <body>
 
@@ -78,6 +79,6 @@ $reqUser -> execute();
 
 <script type="text/javascript">
 	function go () {
-		document.location.href="http://localhost/git/projetweb/form/form_rdv.php";
+		document.location.href="http://localhost/git/projetweb/form/form_rdv.html";
 	}
 </script>
