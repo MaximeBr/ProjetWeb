@@ -41,6 +41,35 @@ $reqUser -> execute();
 	<div class="container-fluid">
 	<h2>Liste des RDV</h2>
 
+	<div class="table-responsive">
+		<table class="table table-bordered">
+			<thead class="thead-dark">
+				<th>Date</th>
+				<th>Durée</th>
+		        <th>Patient</th>
+		        <th>Docteur</th>
+			</thead>
+
+			<?php
+			
+			$i = 0 ;
+			while($i < $nbPatient) {
+				$user = $reqUser -> fetch();
+				$i = $i +1 ;
+			?>
+			<tbody>
+				<tr>
+					<td> <?php echo $user[1] ?>  </td>
+					<td> <?php echo $user[2] ?>  </td>
+					<td> <?php echo $user[3] ?>  </td>
+					<td> <?php echo $user[4] ?>  </td>
+				</tr>
+			</tbody>
+
+		<?php
+		}
+		?>
+		<input type="button" name="ajouter" value="nouveau rdv" class="btn btn-default" onclick="go()">
 
 </body>
 </html>
@@ -49,6 +78,6 @@ $reqUser -> execute();
 
 <script type="text/javascript">
 	function go () {
-		document.location.href="http://localhost/git/projetweb/form_patient.php";
+		document.location.href="http://localhost/git/projetweb/form/form_rdv.php";
 	}
 </script>
