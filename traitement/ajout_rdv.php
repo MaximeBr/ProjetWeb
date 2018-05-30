@@ -29,10 +29,8 @@ $patient = $_POST['patient'];
     $req->execute (array (	
     						'duree' =>$duree,
 							'dateR' => $date,
-							'idMedecin' => $idMedecin, 
-							'idPatient' => $idPatient)); 
-
-    echo "merci vos données ont bien été enregistrées :)";
+							'idMedecin' => $medecin, 
+							'idPatient' => $patient)); 
 
     header('Location: http://localhost/git/projetweb/list/list_rdv.php');
 
