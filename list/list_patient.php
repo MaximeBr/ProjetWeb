@@ -59,6 +59,7 @@ $reqNomMed = $linkpdo -> prepare('select nom , prenom from medecin where idMedec
 		        <th>Ville de naissance</th>
 		        <th>Numero de sécurité</th>
 		        <th>Medecin traitant</th>
+		        <th>Modif</th>
 			</thead>
 
 			<?php
@@ -86,6 +87,7 @@ $reqNomMed = $linkpdo -> prepare('select nom , prenom from medecin where idMedec
 					<td> <?php echo $user[8] ?>  </td>
 					<td> <?php echo $user[9] ?>  </td>
 					<td> <?php echo $nomMed." ".$prenomMed ?>  </td>
+					<td><a href="http://localhost/git/projetweb/form/modifUser.php?user=<?php  echo $user[0]?>" class="btn btn-primary"></td>
 					
 				</tr>
 			</tbody>
