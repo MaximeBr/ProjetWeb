@@ -22,6 +22,10 @@ $reqUser = $linkpdo -> prepare('select * from patient');
 $reqUser -> execute();
 
 
+
+$reqNomMed = $linkpdo -> prepare('select nom , prenom from medecin where idMedecin like :idMedecin');
+
+
 ?>
 
 <!DOCTYPE html>
@@ -61,10 +65,14 @@ $reqUser -> execute();
 			
 			$i = 0 ;
 			while($i < $nbPatient) {
+				// prochain utilisateur
 				$user = $reqUser -> fetch();
-				//print_r($user);
-				//$user = $user[0];
 				$i = $i +1 ;
+				//recupere le nom du medecin traitant en fonction de son id
+				$reqNomMed -> execute(array('idMedecin'=>$user[10]));
+				$res = $reqNomMed -> fetch();
+				$nomMed = $res[0];
+				$prenomMed = $res[1];
 			?>
 			<tbody>
 				<tr>
@@ -77,7 +85,7 @@ $reqUser -> execute();
 					<td> <?php echo $user[7] ?>  </td>
 					<td> <?php echo $user[8] ?>  </td>
 					<td> <?php echo $user[9] ?>  </td>
-					<td> <?php echo $user[10] ?>  </td>
+					<td> <?php echo $nomMed." ".$prenomMed ?>  </td>
 					
 				</tr>
 			</tbody>
