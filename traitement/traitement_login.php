@@ -14,7 +14,7 @@
 
 	try {
 			//On se connecte a MySQL
-			$bdd = new PDO('mysql:host=localhost;dbname=projetweb','root','maxime');
+			$bdd = new PDO('mysql:host=81.64.97.173;dbname=projetweb','root','maxime');
 		}
 		catch (Exception $e) {
 			//En cas d'erreur, on affiche un message et on arrete tout
@@ -30,7 +30,7 @@
 
 
 		if($mdp == $mdp_b) {
-			header('Location: http://localhost/git/ProjetWeb/list/list_rdv.php');
+			header('Location: http://81.64.97.173/git/ProjetWeb/list/list_rdv.php');
 		}
 
 		else {

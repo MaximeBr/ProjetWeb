@@ -15,7 +15,7 @@ $prenom = $_POST['prenom'];
 
 ///Connexion au serveur MySQL 
     try { 
-        $linkpdo = new PDO("mysql:host=localhost;dbname=projetweb", "root", ''); 
+        $linkpdo = new PDO("mysql:host=81.64.97.173;dbname=projetweb", "root", ''); 
     } 
     catch (Exception $e) { 
 		die
@@ -31,7 +31,7 @@ $prenom = $_POST['prenom'];
 
     echo "merci vos données ont bien été enregistrées :)";
 
-    header('Location: http://localhost/git/projetweb/list/list_medecin.php ');
+    header('Location: http://81.64.97.173/git/projetweb/list/list_medecin.php ');
 
 ?>
 

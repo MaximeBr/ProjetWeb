@@ -17,7 +17,7 @@ $patient = $_POST['patient'];
 
 ///Connexion au serveur MySQL 
     try { 
-        $linkpdo = new PDO("mysql:host=localhost;dbname=projetweb", "root", ''); 
+        $linkpdo = new PDO("mysql:host=81.64.97.173;dbname=projetweb", "root", ''); 
     } 
     catch (Exception $e) { 
 		die
@@ -34,7 +34,7 @@ if($res == null){
     ?>
     <script type="text/javascript">
         alert("Patient introuvable, veuillez saisir nom et prenom ou prenom et nom");
-        document.location = 'http://localhost/git/projetweb/form/form_rdv.html';
+        document.location = 'http://81.64.97.173/git/projetweb/form/form_rdv.html';
     </script>
     <?php 
 }
@@ -52,7 +52,7 @@ if($res == null){
     ?>
     <script type="text/javascript">
         alert("Medecin introuvable, veuillez saisir nom et prenom ou prenom et nom");
-        document.location = 'http://localhost/git/projetweb/form/form_rdv.html';
+        document.location = 'http://81.64.97.173/git/projetweb/form/form_rdv.html';
     </script>
     <?php 
 }
@@ -68,7 +68,7 @@ $idMedecin= $res[0];
 							'idMedecin' => $idMedecin, 
 							'idUser' => $idPatient)); 
 
-    header('Location: http://localhost/git/projetweb/list/list_rdv.php');
+    header('Location: http://81.64.97.173/git/projetweb/list/list_rdv.php');
 
 ?>
 

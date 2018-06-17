@@ -1,6 +1,6 @@
 <?php
 session_start();
-$server='localhost';
+$server='81.64.97.173';
 $db='projetweb';
 $login='root';
 $mdp='';
@@ -112,7 +112,7 @@ $civilite = $civilite[0];
 
 <script type="text/javascript">
 	function deconec(){
-		document.location.href="http://localhost/scan/index.php";
+		document.location.href="http://81.64.97.173/scan/index.php";
 		
 	}
 </script>

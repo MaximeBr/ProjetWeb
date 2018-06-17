@@ -1,6 +1,6 @@
 <?php
 session_start();
-$server='localhost';
+$server='81.64.97.173';
 $db='projetweb';
 $login='root';
 $mdp='';
@@ -39,6 +39,6 @@ if(isset($_POST['prenom']) && $_POST['prenom']  != null ){
  		$req -> execute( array('val' => $civilite , 'idUser'=> $_SESSION['idUser']));
  		
  	}
-header ('Location:  http://localhost/git/projetweb/list/list_medecin.php');
+header ('Location:  http://81.64.97.173/git/projetweb/list/list_medecin.php');
 
 ?>

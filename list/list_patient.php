@@ -2,7 +2,7 @@
 
 
 try { 
-	$linkpdo = new PDO("mysql:host=localhost;dbname=projetweb", 'root', ''); //chemin de la base de données a ajouter avec login et mdp 
+	$linkpdo = new PDO("mysql:host=81.64.97.173;dbname=projetweb", 'root', ''); //chemin de la base de données a ajouter avec login et mdp 
 		
 	}catch (Exception $e) { 
 	die('Erreur : '.$e->getMessage());
@@ -80,7 +80,7 @@ $reqNomMed = $linkpdo -> prepare('select nom , prenom from medecin where idMedec
 					<td> <?php echo $user[1] ?>  </td>
 					<!-- <td> <?php echo $user[2] ?>  </td> -->
 					
-						<td><a href="http://localhost/git/projetweb/form/modifUser.php?user=<?php  echo $user[0]?>" class="btn btn-secondary"><?php echo $user[2] ?></td>
+						<td><a href="http://81.64.97.173/git/projetweb/form/modifUser.php?user=<?php  echo $user[0]?>" class="btn btn-secondary"><?php echo $user[2] ?></td>
 					
 					
 					<td> <?php echo $user[3] ?>  </td>
@@ -91,7 +91,7 @@ $reqNomMed = $linkpdo -> prepare('select nom , prenom from medecin where idMedec
 					<td> <?php echo $user[8] ?>  </td>
 					<td> <?php echo $user[9] ?>  </td>
 					<td> <?php echo $nomMed." ".$prenomMed ?>  </td>
-					<td><a href="http://localhost/git/projetweb/traitement/supprimerUser.php?user=<?php  echo $user[0]?>" class="btn btn-primary">Surprimer</td>
+					<td><a href="http://81.64.97.173/git/projetweb/traitement/supprimerUser.php?user=<?php  echo $user[0]?>" class="btn btn-primary">Surprimer</td>
 					
 				</tr>
 			</tbody>
@@ -108,6 +108,6 @@ $reqNomMed = $linkpdo -> prepare('select nom , prenom from medecin where idMedec
 
 <script type="text/javascript">
 	function go () {
-		document.location.href="http://localhost/git/projetweb/form/form_patient.php";
+		document.location.href="http://81.64.97.173/git/projetweb/form/form_patient.php";
 	}
 </script>

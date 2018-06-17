@@ -2,7 +2,7 @@
 
 
 try { 
-	$linkpdo = new PDO("mysql:host=localhost;dbname=projetweb", 'root', ''); //chemin de la base de données a ajouter avec login et mdp 
+	$linkpdo = new PDO("mysql:host=81.64.97.173;dbname=projetweb", 'root', ''); //chemin de la base de données a ajouter avec login et mdp 
 		
 	}catch (Exception $e) { 
 	die('Erreur : '.$e->getMessage());
@@ -84,7 +84,7 @@ $reqMedecin = $linkpdo -> prepare('select nom , prenom from medecin where idMede
 					<td> <?php echo $user[1]." minutes" ?>  </td>
 					<td> <?php echo $nomP." ".$prenomP ?>  </td>
 					<td> <?php echo $nomM." ".$prenomM ?>  </td>
-					<td> ><a href="http://localhost/git/projetweb/traitement/supprimerRdv.php?user=<?php  echo $user[0]?>" class="btn btn-primary">Suprimmer </td>
+					<td> ><a href="http://81.64.97.173/git/projetweb/traitement/supprimerRdv.php?user=<?php  echo $user[0]?>" class="btn btn-primary">Suprimmer </td>
 				</tr>
 			</tbody>
 
@@ -100,6 +100,6 @@ $reqMedecin = $linkpdo -> prepare('select nom , prenom from medecin where idMede
 
 <script type="text/javascript">
 	function go () {
-		document.location.href="http://localhost/git/projetweb/form/form_rdv.html";
+		document.location.href="http://81.64.97.173/git/projetweb/form/form_rdv.html";
 	}
 </script>

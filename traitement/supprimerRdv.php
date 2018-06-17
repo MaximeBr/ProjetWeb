@@ -2,7 +2,7 @@
 <?php
 
 $idUser=$_GET['user'];
-$server='localhost';
+$server='81.64.97.173';
 	$db='projetweb';
 	$login='root';
 	$mdp='';
@@ -28,10 +28,10 @@ try {
 
 		?>
 
-		 document.location.href="http://localhost/git/projetweb/list/list_rdv.php";
+		 document.location.href="http://81.64.97.173/git/projetweb/list/list_rdv.php";
     		
 		} else {
-   			 document.location.href="http://localhost/git/projetweb/list/list_rdv.php";
+   			 document.location.href="http://81.64.97.173/git/projetweb/list/list_rdv.php";
 		}
 </script>
 

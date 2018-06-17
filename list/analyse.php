@@ -1,7 +1,7 @@
 <?php
 include ("../static/navBar.php");
 
-$server='localhost';
+$server='81.64.97.173';
 $db='projetweb';
 $login='root';
 $mdp='';
