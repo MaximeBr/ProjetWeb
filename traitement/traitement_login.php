@@ -14,7 +14,7 @@
 
 	try {
 			//On se connecte a MySQL
-			$bdd = new PDO('mysql:host=localhost;dbname=projetweb','root','');
+			$bdd = new PDO('mysql:host=localhost;dbname=projetweb','root','maxime');
 		}
 		catch (Exception $e) {
 			//En cas d'erreur, on affiche un message et on arrete tout
