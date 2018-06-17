@@ -1,9 +1,9 @@
 <?php
 
 session_start();
-$server='81.64.97.173';
+$server='localhost';
 $db='projetweb';
-$login='root';
+$login='gael';
 $mdp='';
 
 

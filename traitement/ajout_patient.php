@@ -23,7 +23,7 @@ $idMedecin = $_POST['idMedecin'];
 
 ///Connexion au serveur MySQL 
     try { 
-        $linkpdo = new PDO("mysql:host=81.64.97.173;dbname=projetweb", "root", ''); 
+        $linkpdo = new PDO("mysql:host=localhost;dbname=projetweb", "gael", ''); 
     } 
     catch (Exception $e) { 
 		die

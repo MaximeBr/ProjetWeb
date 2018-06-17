@@ -2,7 +2,7 @@
 
 
 try { 
-	$linkpdo = new PDO("mysql:host=81.64.97.173;dbname=projetweb", 'root', ''); //chemin de la base de données a ajouter avec login et mdp 
+	$linkpdo = new PDO("mysql:host=localhost;dbname=projetweb", 'gael', ''); //chemin de la base de données a ajouter avec login et mdp 
 		
 	}catch (Exception $e) { 
 	die('Erreur : '.$e->getMessage());
