@@ -48,6 +48,7 @@ $reqUser -> execute();
 				<th>Civilité</th>
 				<th>Nom</th>
 		        <th>Prenom</th>
+		        <th>Suprimmer</th>
 			</thead>
 
 			<?php
@@ -62,8 +63,9 @@ $reqUser -> execute();
 			<tbody>
 				<tr>
 					<td> <?php echo $user[3] ?>  </td>
-					<td> <?php echo $user[2] ?>  </td>
+					<td><a href="http://localhost/git/projetweb/form/modifierMedecin.php?user=<?php  echo $user[0]?>" class="btn btn-secondary"><?php echo $user[2] ?></td>
 					<td> <?php echo $user[1] ?>  </td>
+					<td><a href="http://localhost/git/projetweb/traitement/supprimerMerdin.php?user=<?php  echo $user[0]?>" class="btn btn-primary">Surprimer</td>
 				</tr>
 			</tbody>
 
@@ -71,7 +73,7 @@ $reqUser -> execute();
 		}
 		?>
 		<input type="button" name="ajouter" value="nouveau medecin" class="btn btn-default" onclick="go()">
-
+	</div>
 </body>
 </html>
 

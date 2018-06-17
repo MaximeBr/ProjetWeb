@@ -78,7 +78,11 @@ $reqNomMed = $linkpdo -> prepare('select nom , prenom from medecin where idMedec
 			<tbody>
 				<tr>
 					<td> <?php echo $user[1] ?>  </td>
-					<td> <?php echo $user[2] ?>  </td>
+					<!-- <td> <?php echo $user[2] ?>  </td> -->
+					
+						<td><a href="http://localhost/git/projetweb/form/modifUser.php?user=<?php  echo $user[0]?>" class="btn btn-secondary"><?php echo $user[2] ?></td>
+					
+					
 					<td> <?php echo $user[3] ?>  </td>
 					<td> <?php echo $user[4] ?>  </td>
 					<td> <?php echo $user[5] ?>  </td>
@@ -87,7 +91,7 @@ $reqNomMed = $linkpdo -> prepare('select nom , prenom from medecin where idMedec
 					<td> <?php echo $user[8] ?>  </td>
 					<td> <?php echo $user[9] ?>  </td>
 					<td> <?php echo $nomMed." ".$prenomMed ?>  </td>
-					<td><a href="http://localhost/git/projetweb/form/modifUser.php?user=<?php  echo $user[0]?>" class="btn btn-primary"></td>
+					<td><a href="http://localhost/git/projetweb/traitement/supprimerUser.php?user=<?php  echo $user[0]?>" class="btn btn-primary">Surprimer</td>
 					
 				</tr>
 			</tbody>

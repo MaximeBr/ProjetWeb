@@ -18,8 +18,14 @@ $req = $linkpdo -> prepare('select count(*) from rdv');
 
 // recupere lid des user qui participe a cet event
 
-$reqUser = $linkpdo -> prepare('select * from rdv');
-$reqUser -> execute();
+$reqRdv = $linkpdo -> prepare('select * from rdv order by dateR desc ');
+$reqRdv -> execute();
+
+
+$reqPatient = $linkpdo -> prepare('select nom , prenom from patient where idUser like :idUser');
+$reqMedecin = $linkpdo -> prepare('select nom , prenom from medecin where idMedecin like :idMedecin');
+
+
 
 
 ?>
@@ -49,21 +55,36 @@ $reqUser -> execute();
 				<th>Durée</th>
 		        <th>Patient</th>
 		        <th>Docteur</th>
+		        <th>Surpimmer</th>
 			</thead>
 
 			<?php
 			
 			$i = 0 ;
 			while($i < $nbPatient) {
-				$user = $reqUser -> fetch();
+				$user = $reqRdv -> fetch();
+				$idUser = $user[4];
+				$idMedecin = $user[3];
+				$reqPatient -> execute(array( 'idUser' => $idUser));
+				$reqMedecin -> execute(array( 'idMedecin' => $idMedecin));
+				$nomPrenomP = $reqPatient -> fetch();
+				$nomP = $nomPrenomP[0];
+				$prenomP = $nomPrenomP[1];
+
+				//info du medecin
+				$nomPrenomM = $reqMedecin -> fetch();
+				$nomM = $nomPrenomM[0];
+				$prenomM = $nomPrenomM[1];
+				
 				$i = $i +1 ;
 			?>
 			<tbody>
 				<tr>
 					<td> <?php echo $user[2] ?>  </td>
-					<td> <?php echo $user[1] ?>  </td>
-					<td> <?php echo $user[3] ?>  </td>
-					<td> <?php echo $user[4] ?>  </td>
+					<td> <?php echo $user[1]." minutes" ?>  </td>
+					<td> <?php echo $nomP." ".$prenomP ?>  </td>
+					<td> <?php echo $nomM." ".$prenomM ?>  </td>
+					<td> ><a href="http://localhost/git/projetweb/traitement/supprimerRdv.php?user=<?php  echo $user[0]?>" class="btn btn-primary">Suprimmer </td>
 				</tr>
 			</tbody>
 

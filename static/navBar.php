@@ -1,10 +1,10 @@
 		<nav class="navbar navbar-inverse">
   			<div class="container-fluid">
     			<div class="navbar-header">
-    				<a class="navbar-brand" href="#">MedecInfo</a>
+    				<a class="navbar-brand" href="http://localhost/git/projetweb/list/analyse.php">Analyse</a>
     			</div>
     			<ul class="nav navbar-nav">
-     				<li class="active"><a href="http://localhost/git/projetweb/list/list_rdv.php">RDV</a></li>
+     				<li ><a href="http://localhost/git/projetweb/list/list_rdv.php">RDV</a></li>
 				    <li><a href="http://localhost/git/projetweb/list/list_patient.php">Patient</a></li>
 				    <li><a href="http://localhost/git/projetweb/list/list_medecin.php">Docteur</a></li>
    				</ul>
